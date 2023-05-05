@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import conn from "./db.js";
 import pageRoute from "./routes/pageRoute.js";
 import photoRoute from "./routes/photoRoute.js";
+
+// global veriables
 dotenv.config();
 
 // connection to the db
@@ -20,7 +22,7 @@ app.use(express.json());
 
 // routes
 app.use("/", pageRoute);
-app.use("/photo", photoRoute);
+app.use("/photos", photoRoute);
 
 app.listen(port, () => {
   console.log(`port:${port}`);
